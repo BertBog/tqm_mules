@@ -31,7 +31,8 @@ location.
 git clone https://github.com/BertBog/tqm_mules.git
 cd tqm_mules
 pip install .
-parse_saves.py
+parse_saves.py  # On UNIX
+parse_saves.exe  # On Windows 
 ```
 
 -----
