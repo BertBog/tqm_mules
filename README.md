@@ -19,6 +19,7 @@ The script currently has no external dependencies and can be executed after clon
 ```
 # Clone the Git repo
 git clone https://github.com/BertBog/tqm_mules.git
+cd tqm_mules
 python3 tqmmules/scripts/parse_saves.py
 ```
 
@@ -36,6 +37,7 @@ options:
   --output OUTPUT  Output file
   --skip-annot     Skip the item annotation
   --debug          Show debug messages
+  --version        Print version and exit
 ```
 
 -----
