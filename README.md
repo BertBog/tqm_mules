@@ -33,6 +33,14 @@ The save data is usually located in the following directory:
 The script does not make any changes, but I suggest you make a backup just in case.
 The script expects the `Main` and `Sys` directories to be present in the input directory.
 
+### Example
+
+```
+python tqmmules/scripts/parse_saves.py --dir-in /path/to/SaveData
+```
+
+### Options
+
 ```
 usage: parse_saves.py [-h] --dir-in DIR_IN [--output OUTPUT] [--skip-annot]
                       [--debug]
