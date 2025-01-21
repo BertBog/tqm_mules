@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import argparse
 from datetime import datetime
 from pathlib import Path
@@ -5,6 +6,7 @@ from pathlib import Path
 from tqmmules.app.itemdb import ItemDB
 from tqmmules.app.saveparser import SaveParser
 from tqmmules.app.tqmmlogger import logger, initialize_logging
+from tqmmules.version import __version__
 
 
 def _parse_args() -> argparse.Namespace:
@@ -17,6 +19,8 @@ def _parse_args() -> argparse.Namespace:
     argument_parser.add_argument('--output', type=Path, required=False, help='Output file')
     argument_parser.add_argument('--skip-annot', action='store_true', help='Skip the item annotation')
     argument_parser.add_argument('--debug', action='store_true', help='Show debug messages')
+    argument_parser.add_argument(
+        '--version', help='Print version and exit', action='version', version=f'tqm_mules {__version__}')
     return argument_parser.parse_args()
 
 

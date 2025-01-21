@@ -14,17 +14,44 @@ across characters (i.e., mules) on mobile.
 
 - [Python 3](https://www.python.org/downloads/)
 
-The script currently has no external dependencies and can be executed after cloning the repo.
+
+The script has no external dependencies and can be run immediately after cloning the repository. However, if you execute 
+it this way, ensure you are in the project's root directory.
 
 ```
-# Clone the Git repo
 git clone https://github.com/BertBog/tqm_mules.git
+cd tqm_mules
 python3 tqmmules/scripts/parse_saves.py
+```
+
+Alternatively, the package can be installed in the current Python environment, allowing it to be executed from any 
+location.
+
+```
+git clone https://github.com/BertBog/tqm_mules.git
+cd tqm_mules
+pip install .
+parse_saves.py  # On UNIX
+parse_saves.exe  # On Windows 
 ```
 
 -----
 
 ## USAGE
+
+The save data is usually located in the following directory:
+`Android\data\com.hg.titanquestedition\files\Preferences\SaveData`
+
+The script does not make any changes, but I suggest you make a backup just in case.
+The script expects the `Main` and `Sys` directories to be present in the input directory.
+
+### Example
+
+```
+python tqmmules/scripts/parse_saves.py --dir-in /path/to/SaveData
+```
+
+### Options
 
 ```
 usage: parse_saves.py [-h] --dir-in DIR_IN [--output OUTPUT] [--skip-annot]
@@ -36,6 +63,7 @@ options:
   --output OUTPUT  Output file
   --skip-annot     Skip the item annotation
   --debug          Show debug messages
+  --version        Print version and exit
 ```
 
 -----
