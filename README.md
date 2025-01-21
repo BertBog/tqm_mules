@@ -27,6 +27,12 @@ python3 tqmmules/scripts/parse_saves.py
 
 ## USAGE
 
+The save data is usually located in the following directory:
+`Android\data\com.hg.titanquestedition\files\Preferences\SaveData`
+
+The script does not make any changes, but I suggest you make a backup just in case.
+The script expects the `Main` and `Sys` directories to be present in the input directory.
+
 ```
 usage: parse_saves.py [-h] --dir-in DIR_IN [--output OUTPUT] [--skip-annot]
                       [--debug]
