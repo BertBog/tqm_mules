@@ -14,13 +14,24 @@ across characters (i.e., mules) on mobile.
 
 - [Python 3](https://www.python.org/downloads/)
 
-The script currently has no external dependencies and can be executed after cloning the repo.
+
+The script has no external dependencies and can be run immediately after cloning the repository. However, if you execute 
+it this way, ensure you are in the project's root directory.
 
 ```
-# Clone the Git repo
 git clone https://github.com/BertBog/tqm_mules.git
 cd tqm_mules
 python3 tqmmules/scripts/parse_saves.py
+```
+
+Alternatively, the package can be installed in the current Python environment, allowing it to be executed from any 
+location.
+
+```
+git clone https://github.com/BertBog/tqm_mules.git
+cd tqm_mules
+pip install .
+parse_saves.py
 ```
 
 -----
